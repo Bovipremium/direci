@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Abrindo WhatsApp...</title>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const phone = "5562993463712";
+      const msg = "Olá, gostaria de saber mais informações!!";
+      const encodedMsg = encodeURIComponent(msg);
+
+      // link direto para o app do WhatsApp
+      const appLink = `whatsapp://send?phone=${phone}&text=${encodedMsg}`;
+      window.location.href = appLink;
+    });
+  </script>
+</head>
+<body>
+  <p>Abrindo o WhatsApp... Se não abrir, verifique se o aplicativo está instalado.</p>
+</body>
+</html>
