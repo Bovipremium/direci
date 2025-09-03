@@ -3,64 +3,43 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Result Plus Mosca - BoviPremium</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: Arial, sans-serif;
-      background: url("result plus mosca total.jpg") no-repeat center center/cover;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-    }
+  <title>Redirecionando para WhatsApp...</title>
 
-    .overlay {
-      background: rgba(0, 0, 0, 0.65);
-      padding: 40px;
-      border-radius: 20px;
-      color: #fff;
-      max-width: 500px;
-    }
+  <!-- Meta Pixel Code -->
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '1210572513490047'); 
+  fbq('track', 'PageView');
+  </script>
+  <noscript>
+    <img height="1" width="1" style="display:none"
+         src="https://www.facebook.com/tr?id=1210572513490047&ev=PageView&noscript=1"/>
+  </noscript>
+  <!-- End Meta Pixel Code -->
 
-    h1 {
-      font-size: 2rem;
-      margin-bottom: 20px;
-    }
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const phone = "5562993463712";  // <- Número do WhatsApp
+      const msg = "Olá, gostaria de saber mais informações!!"; // <- Mensagem padrão
+      const encodedMsg = encodeURIComponent(msg);
+      const appLink = `whatsapp://send?phone=${phone}&text=${encodedMsg}`;
 
-    .btn {
-      display: inline-block;
-      background: #25D366;
-      color: #fff;
-      padding: 15px 30px;
-      font-size: 1.2rem;
-      font-weight: bold;
-      border-radius: 40px;
-      text-decoration: none;
-      transition: 0.3s;
-      box-shadow: 0px 4px 12px rgba(0,0,0,0.4);
-    }
+      // dispara evento Contact
+      fbq('track', 'Contact'); 
 
-    .btn:hover {
-      background: #20b954;
-      transform: scale(1.08);
-    }
-
-    .curiosity {
-      font-size: 1.1rem;
-      margin-top: 20px;
-      color: #f1c40f;
-      font-weight: bold;
-    }
-  </style>
+      // redireciona para WhatsApp
+      window.location.href = appLink;
+    });
+  </script>
 </head>
 <body>
-  <div class="overlay">
-    <h1>Result Plus</h1>
-    <a href="whatsapp://send?phone=5562993463712&text=Olá,+gostaria+de+saber+mais+informações!!" class="btn">SOBRE O PRODUTO</a>
-    <p class="curiosity">Clique no verde para mais informações sobre o produto do video, no whatsapp!</p>
-  </div>
+  <p>Redirecionando para o WhatsApp...</p>
 </body>
 </html>
